@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  background: linear-gradient(165deg, #097bfd 56%, #f2f3f5 44%);
+  position: relative;
+}
+
+.remove-left-pad {
+  padding-left: 0;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+label {
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .no-pad-mobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

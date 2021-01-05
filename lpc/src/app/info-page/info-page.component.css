@@ -1,0 +1,22 @@
+.wrapper {
+  height: 70%;
+  margin-top: 15%;
+  margin-left: 8%;
+}
+
+.counter {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fef1e3;
+}
+
+.header-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 1.4rem;
+}

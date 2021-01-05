@@ -1,0 +1,67 @@
+.wrapper {
+  width: 70%;
+  margin: 10% auto;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.container {
+  border-radius: 5px;
+}
+
+.sidebar {
+  width: 30%;
+  height: auto;
+  background-color: #304767;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.step-text {
+  margin-top: 40%;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.regular-text {
+  font-size: 1.4rem;
+  color: #7488a1;
+  position: relative;
+}
+
+.number-wrapper {
+  border: 1px solid #7488a1;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.active-wrapper {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.active-text {
+  color: #ffffff;
+}
+
+.filler {
+  height: 5rem;
+  width: 0.13rem;
+  background-color: #7488a1;
+  margin-left: 5%;
+}
+
+.filler-2 {
+  height: 13rem;
+}
+
+.content {
+  width: 70%;
+  background-color: #fafafc;
+}
