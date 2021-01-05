@@ -2,46 +2,51 @@
   <div class="container d-flex flex-row">
     <aside class="sidebar p-2 text-white">
       <p class="mt-4 mx-5 logo-text">indeed</p>
-      <p class="step-text mx-5">Step 1</p>
-      <p class="regular-text mx-5 text-white">Enter your personal information to get closer to companies</p>
+      <p class="step-text mx-5">Step {{ currentStep }}</p>
+      <ng-container [ngSwitch]="currentStep">
+        <p class="regular-text mx-5 text-white" *ngSwitchCase="1">Enter your personal information to get closer to companies.</p>
+        <p class="regular-text mx-5 text-white" *ngSwitchCase="2">Get to know better by adding your diploma, cerificate and education life.</p>
+        <p class="regular-text mx-5 text-white" *ngSwitchCase="3">Help companies get to know you better by telling them about your past experiences.</p>
+        <p class="regular-text mx-5 text-white" *ngSwitchCase="4">Add your profile picture and let companies find you fast.</p>
+      </ng-container>
       <div>
         <div class="d-flex flex-column mx-5 mt-4">
           <div class="d-flex flex-row regular-text mb-2">
-            <div class="number-wrapper text-center active-wrapper">
+            <div class="number-wrapper text-center" [ngClass]="setWrapperClass(1)">
               <span>1</span>
             </div>
-            <div class="text-wrapper ml-4 active-text">Personal Information</div>
+            <div class="text-wrapper ml-4" [ngClass]="setTextClass(1)">Personal Information</div>
           </div>
           <div class="filler mb-2"></div>
           <div class="d-flex flex-row regular-text mb-2">
-            <div class="number-wrapper text-center">
+            <div class="number-wrapper text-center" [ngClass]="setWrapperClass(2)">
               <span>2</span>
             </div>
-            <div class="text-wrapper ml-4">Education</div>
+            <div class="text-wrapper ml-4" [ngClass]="setTextClass(2)">Education</div>
           </div>
           <div class="filler mb-2"></div>
           <div class="d-flex flex-row regular-text mb-2">
-            <div class="number-wrapper text-center">
+            <div class="number-wrapper text-center" [ngClass]="setWrapperClass(3)">
               <span>3</span>
             </div>
-            <div class="text-wrapper ml-4">Work Experience</div>
+            <div class="text-wrapper ml-4" [ngClass]="setTextClass(3)">Work Experience</div>
           </div>
           <div class="filler mb-2"></div>
           <div class="d-flex flex-row regular-text mb-5">
-            <div class="number-wrapper text-center">
+            <div class="number-wrapper text-center" [ngClass]="setWrapperClass(4)">
               <span>4</span>
             </div>
-            <div class="text-wrapper ml-4">User Photo</div>
+            <div class="text-wrapper ml-4" [ngClass]="setTextClass(4)">User Photo</div>
           </div>
           <div class="filler-2"></div>
         </div>
       </div>
     </aside>
-    <div class="content">
-      <!-- <app-info-page></app-info-page> -->
-      <!-- <app-education-page></app-education-page> -->
-      <app-work-page></app-work-page>
-      <!-- <app-photo-page></app-photo-page> -->
+    <div class="content" [ngSwitch]="currentStep">
+      <app-info-page *ngSwitchCase="1"></app-info-page>
+      <app-education-page *ngSwitchCase="2"></app-education-page>
+      <app-work-page *ngSwitchCase="3"></app-work-page>
+      <app-photo-page *ngSwitchCase="4"></app-photo-page>
     </div>
   </div>
 </div>
