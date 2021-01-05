@@ -7,6 +7,7 @@ import { InfoPageComponent } from './components/info-page/info-page.component';
 import { EducationPageComponent } from './components/education-page/education-page.component';
 import { WorkPageComponent } from './components/work-page/work-page.component';
 import { PhotoPageComponent } from './components/photo-page/photo-page.component';
+import { BackButtonDirective } from './directives/back-button.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PhotoPageComponent } from './components/photo-page/photo-page.component
     InfoPageComponent,
     EducationPageComponent,
     WorkPageComponent,
-    PhotoPageComponent
+    PhotoPageComponent,
+    BackButtonDirective
   ],
   imports: [
     BrowserModule,
