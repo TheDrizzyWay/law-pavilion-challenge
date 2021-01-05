@@ -20,3 +20,13 @@
   color: #777;
   font-size: 1.4rem;
 }
+
+.btn {
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.back-btn {
+  margin-left: -2.5%;
+}

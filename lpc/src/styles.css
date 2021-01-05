@@ -32,6 +32,10 @@ input {
   font-size: 1.4rem;
 }
 
+input:focus {
+  border-color: #c6deed;
+}
+
 label {
   font-size: 1.4rem;
 }
