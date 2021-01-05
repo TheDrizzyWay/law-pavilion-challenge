@@ -29,7 +29,9 @@ export class EducationPageComponent implements OnInit {
   }
 
   eduSubmit() {
-    this.stepService.changeStep(3);
+    if (this.educationForm.valid) {
+      this.stepService.changeStep(3);
+    }
   }
 
 }

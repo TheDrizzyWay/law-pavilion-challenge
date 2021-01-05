@@ -44,7 +44,9 @@ export class InfoPageComponent implements OnInit {
   }
 
   infoSubmit() {
-    this.stepService.changeStep(2);
+    if (this.infoForm.valid) {
+      this.stepService.changeStep(2);
+    }
   }
 
 }

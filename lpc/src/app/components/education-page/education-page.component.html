@@ -8,30 +8,33 @@
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">School</label>
+            <label for="school">School</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="school" />
+            <span class="text-danger" *ngIf="educationForm.controls['school'].errors?.required && !educationForm.controls['school'].pristine">School is required</span>
           </div> 
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">Course</label>
+            <label for="course">Course</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="course" />
+            <span class="text-danger" *ngIf="educationForm.controls['course'].errors?.required && !educationForm.controls['course'].pristine">Course is required</span>
           </div> 
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">Qualifications</label>
+            <label for="qualifications">Qualifications</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="qualifications" />
+            <span class="text-danger" *ngIf="educationForm.controls['qualifications'].errors?.required && !educationForm.controls['qualifications'].pristine">Qualification is required</span>
           </div>
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <button class="btn back-btn px-4 py-2" appBackButton>Back</button>
-        <button class="btn btn-primary px-4 py-2 ml-4">Next Step</button>
+        <button type="submit" class="btn btn-primary px-4 py-2 ml-4">Next Step</button>
       </div>
     </form>
   </div>

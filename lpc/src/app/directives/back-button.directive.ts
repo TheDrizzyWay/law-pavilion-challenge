@@ -1,5 +1,4 @@
 import { Directive, HostListener, OnInit } from '@angular/core';
-import { pipe } from 'rxjs';
 import { StepService } from '../services/step.service';
 
 @Directive({

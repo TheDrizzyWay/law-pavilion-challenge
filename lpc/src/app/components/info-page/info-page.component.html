@@ -8,48 +8,53 @@
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">First Name</label>
+            <label for="firstName">First Name</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="firstName" />
+            <span class="text-danger" *ngIf="infoForm.controls['firstName'].errors?.required && !infoForm.controls['firstName'].pristine">First name is required</span>
           </div> 
         </div>
         <div class="form-group col-12 col-md-5 mb-4 no-pad-mobile">
           <div>
-            <label for="">Last Name</label>
+            <label for="lastName">Last Name</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="lastName"/>
+            <span class="text-danger" *ngIf="infoForm.controls['lastName'].errors?.required && !infoForm.controls['lastName'].pristine">Last name is required</span>
           </div> 
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">Phone Number</label>
+            <label for="phoneNumber">Phone Number</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="phoneNumber" />
+            <span class="text-danger" *ngIf="infoForm.controls['phoneNumber'].errors?.required && !infoForm.controls['phoneNumber'].pristine">Phone Number is required</span>
           </div> 
         </div>
         <div class="form-group col-12 col-md-5 mb-4 no-pad-mobile">
           <div>
-            <label for="">Email Address</label>
+            <label for="email">Email Address</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="email"/>
+            <span class="text-danger" *ngIf="infoForm.controls['email'].errors?.email && !infoForm.controls['email'].pristine">Please enter a valid email address</span>
           </div> 
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <div class="form-group col-12 col-md-5 mb-4 remove-left-pad no-pad-mobile">
           <div>
-            <label for="">Country</label>
+            <label for="country">Country</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="country" />
+            <span class="text-danger" *ngIf="infoForm.controls['country'].errors?.required && !infoForm.controls['country'].pristine">Country is required</span>
           </div>
         </div>
         <div class="form-group col-12 col-md-5 mb-4 no-pad-mobile">
           <div>
-            <label for="">City</label>
+            <label for="city">City</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="city"/>
           </div> 
         </div>
       </div>
       <div class="d-flex flex-column flex-md-row mb-4">
         <button class="btn back-btn px-4 py-2" disabled>Back</button>
-        <button class="btn btn-primary px-4 py-2 ml-4">Next Step</button>
+        <button type="submit" class="btn btn-primary px-4 py-2 ml-4">Next Step</button>
       </div>
     </form>
   </div>

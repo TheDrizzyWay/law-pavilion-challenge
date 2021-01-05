@@ -67,6 +67,10 @@ label {
   margin-left: -2.5%;
 }
 
+.text-danger {
+  font-size: 1.3rem;
+}
+
 @media only screen and (max-width: 768px) {
   .no-pad-mobile {
     padding-left: 0 !important;
