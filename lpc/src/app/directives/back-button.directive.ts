@@ -15,7 +15,7 @@ export class BackButtonDirective implements OnInit {
 
   @HostListener('click')
   onClick(): void {
-    this.stepService.changeStep(this.currentStep -1);
+    this.stepService.changeStep(this.currentStep - 1);
   }
 
 }

@@ -12,20 +12,13 @@ export class WorkPageComponent implements OnInit {
     experience1: new FormControl('', [
       Validators.required
     ]),
-    position: new FormControl('', [
+    position1: new FormControl('', [
       Validators.required,
       Validators.maxLength(50)
     ]),
-    experience2: new FormControl('', [
-      Validators.required
-    ]),
-    position2: new FormControl('', [
-      Validators.required,
-      Validators.maxLength(50)
-    ]),
-    experience3: new FormControl('', [
-      Validators.required
-    ])
+    experience2: new FormControl(''),
+    position2: new FormControl(''),
+    experience3: new FormControl('')
   });
 
   constructor(private stepService: StepService) { }
@@ -34,7 +27,9 @@ export class WorkPageComponent implements OnInit {
   }
 
   workSubmit() {
-    this.stepService.changeStep(4);
+    if (this.workForm.valid) {
+      this.stepService.changeStep(4);
+    }
   }
 
 }

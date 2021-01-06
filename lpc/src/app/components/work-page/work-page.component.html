@@ -10,12 +10,14 @@
           <div>
             <label for="">Experience 1</label>
             <input type="text" class="form-input w-100 py-3 pl-5" formControlName="experience1" />
+            <span class="text-danger" *ngIf="workForm.controls['experience1'].errors?.required && !workForm.controls['experience1'].pristine">Experience is required</span>
           </div> 
         </div>
         <div class="form-group col-12 col-md-5 mb-4 no-pad-mobile">
           <div>
             <label for="">Position</label>
-            <input type="text" class="form-input w-100 py-3 pl-5" formControlName="position"/>
+            <input type="text" class="form-input w-100 py-3 pl-5" formControlName="position1"/>
+            <span class="text-danger" *ngIf="workForm.controls['position1'].errors?.required && !workForm.controls['position1'].pristine">Position is required</span>
           </div> 
         </div>
       </div>
