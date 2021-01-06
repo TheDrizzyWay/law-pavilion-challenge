@@ -6,7 +6,7 @@
 
 .image-wrapper {
   width: 75%;
-  height: 23vh;
+  height: 25vh;
   border-radius: 10px;
   border: 1px solid transparent;
 }
@@ -68,7 +68,7 @@
 	opacity: 0;
 	overflow: hidden;
   position: absolute;
-  top: -20%;
+  top: -22%;
   cursor: pointer;
   z-index: 10;
 }
@@ -77,3 +77,6 @@
   border-radius: 50%;
 }
 
+.text-danger {
+  margin-left: 25%;
+}

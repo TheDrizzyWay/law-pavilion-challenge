@@ -4,29 +4,32 @@
   <p class="sub-text">Upload your profile picture and show yourself</p>
 
   <div class="form-wrapper mt-5">
+    <form [formGroup]="uploadForm" (submit)="onSubmit()">
 
-    <div class="image-wrapper mb-5 d-flex flex-column">
-      <div class="top"></div>
-      <div class="bottom px-5">
-        <label for="file" class="img-label">
-          <div class="user-img">
-            <input type="file" name="file" accept="image/*" class="img-input" (change)="showPreview($event.target.files)">
-            <img *ngIf="imageSrc" [src]="imageSrc" height="65" width="65" class="preview">
-          </div>
-        </label>
-        <div class="user-text">
-          <p class="user-name header-text">Berktug Mutlu</p>
-          <div class="d-flex flex-row justify-content-between">
-            <p class="user-location">Izmir, Turkey <span>Hiring!</span></p>
-            <p class="user-apply">17 last day <span class="ml-4">94 apply</span></p>
+      <div class="image-wrapper mb-5 d-flex flex-column">
+        <div class="top"></div>
+        <div class="bottom px-5">
+          <label for="file" class="img-label">
+            <div class="user-img">
+              <input type="file" name="file" accept="image/*" class="img-input" (change)="showPreview($event.target.files)" formControlName="imageUrl">
+              <img *ngIf="imageSrc" [src]="imageSrc" height="65" width="65" class="preview">
+            </div>
+          </label>
+          <span class="text-danger" *ngIf="!!formControls.imageUrl.hasError('required')">Please upload an image</span>
+          <div class="user-text">
+            <p class="user-name header-text">Berktug Mutlu</p>
+            <div class="d-flex flex-row justify-content-between">
+              <p class="user-location">Izmir, Turkey <span>Hiring!</span></p>
+              <p class="user-apply">17 last day <span class="ml-4">94 apply</span></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     
-    <div class="d-flex flex-column flex-md-row mb-4">
-      <button class="btn back-btn px-4 py-2" appBackButton>Back</button>
-      <button class="btn btn-primary px-4 py-2 ml-4">Submit</button>
-    </div>
+      <div class="d-flex flex-column flex-md-row mb-4">
+        <button class="btn back-btn px-4 py-2" appBackButton>Back</button>
+        <button type="submit" class="btn btn-primary px-4 py-2 ml-4" [disabled]="loading || !uploadForm.valid">{{ loading ? 'Uploading' : 'Submit' }}</button>
+      </div>
+    </form>
   </div>
 </div>

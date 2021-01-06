@@ -63,6 +63,10 @@ label {
   border-radius: 5px;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+}
+
 .back-btn {
   margin-left: -2.5%;
 }

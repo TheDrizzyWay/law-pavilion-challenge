@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,9 @@ export class StepService {
 
   changeStep(step: number): void {
     return this.stepSubject.next(step);
+  }
+
+  submission(data): Observable<boolean> {
+    return of(true);
   }
 }
